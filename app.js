@@ -16,7 +16,6 @@ var index = require('./routes/index');
 var app = express();
 
 //mongoose.connect('localhost:27017/ezcomdb_master');
-//mongoose.connect('mongodb://bigdatadb:JlcX7j3VBNZl8d0BUYQW0Q9gSKD9SW0PgMQ13MsrpAApSWh6kzlgUDwILKbBeNR8l451KWKu1FKHpn8vQ4HKiw==@bigdatadb.documents.azure.com:10250/ezcomdb_master/?ssl=true');
 mongoose.connect('mongodb://bigdatadb:JlcX7j3VBNZl8d0BUYQW0Q9gSKD9SW0PgMQ13MsrpAApSWh6kzlgUDwILKbBeNR8l451KWKu1FKHpn8vQ4HKiw==@bigdatadb.documents.azure.com:10250/ezcomdb_master/?ssl=true');
 
 // view engine setup
@@ -28,15 +27,7 @@ app.set('view engine', '.hbs');
 // app.set('view engine', 'hbs');
  app.set('views', path.join(__dirname, 'views'));
 
-// app.get('/', function(res, res) {
-//   res.render('index', {
-//     title: 'EZCOM e-Commerce',
-//     author: {name: 'Birupakhya', age:29},
-//     message: 'This is a test. Yes, just a test.'
-//   });
-// });
-//console.log('Express server listening on port ' + app.get('port'));
-
+// Uncomment when promoting to Azure
 app.set('port', 3000);
 console.log('Express server listening on port ' + app.get('port'));
 
