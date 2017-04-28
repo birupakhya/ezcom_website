@@ -15,6 +15,7 @@ var index = require('./routes/index');
 
 var app = express();
 
+//this is a comment
 //mongoose.connect('localhost:27017/ezcomdb_master');
 mongoose.connect('mongodb://bigdatadb:JlcX7j3VBNZl8d0BUYQW0Q9gSKD9SW0PgMQ13MsrpAApSWh6kzlgUDwILKbBeNR8l451KWKu1FKHpn8vQ4HKiw==@bigdatadb.documents.azure.com:10250/ezcomdb_master/?ssl=true');
 
