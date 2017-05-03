@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 //var users = require('./routes/users');
-
+var searchproduct = require('./routes/searchproduct')
 var app = express();
 
 //this is a comment
@@ -46,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 //app.use('/users', users);
+app.use('/searchproduct',searchproduct)
 
 
 // catch 404 and forward to error handler
