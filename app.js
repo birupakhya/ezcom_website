@@ -12,12 +12,12 @@ var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 //var users = require('./routes/users');
-
+var searchproduct = require('./routes/searchproduct')
 var app = express();
 
 //this is a comment
 //mongoose.connect('localhost:27017/ezcomdb_master');
-mongoose.connect('mongodb://bigdatadb:JlcX7j3VBNZl8d0BUYQW0Q9gSKD9SW0PgMQ13MsrpAApSWh6kzlgUDwILKbBeNR8l451KWKu1FKHpn8vQ4HKiw==@bigdatadb.documents.azure.com:10250/ezcomdb_master/?ssl=true');
+//mongoose.connect('mongodb://bigdatadb:JlcX7j3VBNZl8d0BUYQW0Q9gSKD9SW0PgMQ13MsrpAApSWh6kzlgUDwILKbBeNR8l451KWKu1FKHpn8vQ4HKiw==@bigdatadb.documents.azure.com:10250/ezcomdb_master/?ssl=true');
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
@@ -46,6 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 //app.use('/users', users);
+app.use('/searchproduct',searchproduct)
 
 
 // catch 404 and forward to error handler
