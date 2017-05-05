@@ -17,7 +17,7 @@ console.log(result);
 
 });
 
-searchproductrouter.get('/searchproduct', function(req, res, next) {
+searchproductrouter.get('/', function(req, res, next) {
   console.log('In search  product');
   searchQuery = req.query['searchquery']
   console.log(searchQuery)
