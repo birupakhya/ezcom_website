@@ -32,7 +32,11 @@ azureclient.lookup('products',searchQuery , function(err,result){
   console.log(result);
 });
 
-  azureclient.suggest('products',{search:searchQuery, suggesterName:'suggest'},function(err,result){
+  // azureclient.suggest('products',{search:searchQuery, suggesterName:'suggest'},function(err,result){
+  // console.log(result);
+  // });
+
+  azureclient.suggest('products', {search:searchQuery,suggesterName:'suggest',fuzzy: true,searchFields: "title, description,imagePath","api-version":"2016-09-01"},function(err,result){
   console.log(result);
   });
 
