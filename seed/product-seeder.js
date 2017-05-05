@@ -8,10 +8,10 @@ mongoose.connect('mongodb://bigdatadb:JlcX7j3VBNZl8d0BUYQW0Q9gSKD9SW0PgMQ13MsrpA
 
 var products = [
     new Product({
-    imagePath: 'http://s7d2.scene7.com/is/image/SamsungUS/S8Plus_Silver_Front_032317?$product-details-jpg$',
-    title: 'Samsung Galaxy 8',
-    description: 'Samsung Galaxy 8',
-    price: 679
+    imagePath: 'images/s8.jpeg',
+    title: 'Samsung Galaxy S8 64GB Unlocked Phone - International Version (Midnight Black)',
+    description: 'Infinity Display: a bezel-less, full-frontal, edge-to-edge screen. Default resolution is Full HD+ and can be changed to Quad HD+ (WQHD+) in Settings. Camera resolution - Front: 8 MP AF, Rear: 12 MP OIS AF. Memory: Internal Memory 64 GB, RAM 4GB',
+    price: 828
     }),
     new Product({
     imagePath: 'http://cdn2.gsmarena.com/vv/pics/apple/apple-iphone-7-3.jpg',
