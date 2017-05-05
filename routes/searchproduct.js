@@ -10,11 +10,7 @@ searchproductrouter.get('/:input', function (req, res, next) {
 searchQuery = req.query['searchquery'];
 azureclient.suggest('products',{search:searchQuery},function(err,result,raw){
 console.log(result);
-
-});
-
-
-
+  });
 });
 
 searchproductrouter.get('/', function(req, res, next) {
