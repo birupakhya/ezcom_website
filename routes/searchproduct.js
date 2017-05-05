@@ -22,9 +22,14 @@ searchproductrouter.get('/', function(req, res, next) {
   searchQuery = req.query['searchquery']
   console.log(searchQuery)
   
-  azureclient.suggest('products',{search:searchQuery},function(err,result,raw){
+  // azureclient.suggest('products',{search:searchQuery},function(err,result,raw){
+  // console.log(result);
+  // });
+
+  azureclient.suggest('products',{search:searchQuery, suggesterName:'suggest'},function(err,result){
   console.log(result);
   });
+
 
   azureclient.search('products', {search: searchQuery},function(err,results,raw){
     console.log(results);
