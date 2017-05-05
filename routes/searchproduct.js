@@ -26,6 +26,12 @@ searchproductrouter.get('/', function(req, res, next) {
   // console.log(result);
   // });
 
+  // retrieve a document from an index
+azureclient.lookup('products',searchQuery , function(err,result){
+	// optional error, or the document
+  console.log(result);
+});
+
   azureclient.suggest('products',{search:searchQuery, suggesterName:'suggest'},function(err,result){
   console.log(result);
   });
