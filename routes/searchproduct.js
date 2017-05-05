@@ -8,7 +8,7 @@ var azureclient = AzureSearch({
 
 searchproductrouter.get('/:input', function (req, res, next) {
 searchQuery = req.query['searchquery'];
-azureclient.suggest('temp',{search:searchQuery},function(err,result,raw){
+azureclient.suggest('products',{search:searchQuery},function(err,result,raw){
 console.log(result);
 
 });
@@ -17,12 +17,11 @@ console.log(result);
 
 });
 
-
 searchproductrouter.get('/', function(req, res, next) {
   console.log('In search  product');
   searchQuery = req.query['searchquery']
   console.log(searchQuery)
-  azureclient.search('temp', {search: searchQuery},function(err,results,raw){
+  azureclient.search('products', {search: searchQuery},function(err,results,raw){
     console.log(results);
     console.log(results.length)
     res.render('shop/searchproduct', {searchproducts: results})
